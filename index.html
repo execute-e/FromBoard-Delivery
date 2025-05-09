@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FromBoard Delivery | Home</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+  </head>
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__inner container">
+        <div class="header__extra">
+          <div class="header__logo-overlay">
+            <a 
+              href="/"
+              class="header__logo"
+              aria-current="page"
+            >
+              <img
+                src="UI/icons/logo.svg"
+                alt="FromBoard Delivery - Вернуться на главную"
+                class="header__logo-image"
+                width="305" height="74"
+                decoding="async"
+              >
+            </a>
+          </div>
+          <div class="header__extra-info">
+            <div class="header__extra-description">
+              <p class="header__extra-paragraph">Доставляем товары из заграницы в Россию</p>
+              <p class="header__extra-paragraph">Стоимость от 550 рублей за заказ</p>
+              <p class="header__extra-paragraph">1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</p>
+            </div>
+            <div class="header__extra-phone">
+              <p class="header__extra-number fsize36-20 h1">+7 (800) 123 45-67</p>
+              <p class="header__extra-text fsize24-18">Звонки по России бесплатны</p>
+              <button class="header__burger-button burger-button" data-js-header-button>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__menu">
+          <nav class="header__navigation">
+            <ul class="header__list" role="list">
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link header__link--active">Калькулятор</a>
+              </li>
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link">О нас</a>
+              </li>
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link">Гарантии</a>
+              </li>
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link">Отзывы</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="/" class="header__button btn">Оставить заявку</a>
+        </div>
+
+      </div>
+      <div class="header__overlay container" data-js-header-overlay>
+        <div class="header__menu is-overlay">
+          <nav class="header__navigation">
+            <ul class="header__list" role="list">
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link header__link--active">Калькулятор</a>
+              </li>
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link">О нас</a>
+              </li>
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link">Гарантии</a>
+              </li>
+              <li class="header__item" role="listitem">
+                <a href="/" class="header__link">Отзывы</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="/" class="header__button btn">Оставить заявку</a>
+        </div>
+        <div class="header__extra-description is-overlay">
+          <p class="header__extra-paragraph">Доставляем товары из заграницы в Россию</p>
+          <p class="header__extra-paragraph">Стоимость от 550 рублей за заказ</p>
+          <p class="header__extra-paragraph">1 $ = 93 ₽ | 1 € = 99 ₽ | 1 ¥ = 13 ₽</p>
+        </div>
+      </div>    
+    </header>
+    
+    <main>
+      <section class="section container hero" aria-labelledby="hero-title">
+        <div class="section__title"></div>
+        <div class="section__body">
+          <div class="hero__body">
+            <div class="hero__info">
+              <div class="hero__text">
+                <h1 class="hero__title" id="hero-title">Беспроблемная доставка купленных вещей из США, Европы и Азии в Россию</h1>
+                <p class="hero__subtitle fsize20">Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России</p>
+              </div>
+              <img
+                src="UI/images/hero.png"
+                alt=""
+                class="hero__image"
+                width="756" height="352" loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="hero__calculator">
+              <div class="hero__calculator-info">
+                <p class="hero__calculator-title fsize30">Калькулятор доставки</p>
+                <p class="hero__calculator-subtitle fsize16">Посчитайте, сколько будет стоить перевозка покупки из зарубежа</p>
+              </div>
+              <form class="hero__form">
+                <input type="text" class="hero__input" placeholder="Имя">
+                <input type="email" class="hero__input" placeholder="Почта">
+                <input type="tel" class="hero__input" placeholder="Телефон">
+                <input type="number" class="hero__input" placeholder="Общая площадь, м²">
+                <input type="number" class="hero__input" placeholder="Вес, кг">
+                <input type="text" class="hero__input" placeholder="Страна покупки">
+                <input type="text" class="hero__input" placeholder="Город покупки">
+                <input type="text" class="hero__input" placeholder="Область доставки">
+                <input type="text" class="hero__input" placeholder="Город доставки">
+                <button class="btn hero__button" type="submit">Заказать расчёт</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="src/scripts/main.js" type="module" defer></script>
+  </body>
+</html>

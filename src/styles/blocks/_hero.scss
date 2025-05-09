@@ -1,0 +1,124 @@
+@use '../helpers' as *;
+
+.hero {
+    &__body {
+        display: flex;
+        column-gap: rem(24);
+
+        @include laptop-l {
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+    }
+
+    &__text {
+        row-gap: rem(12);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+        justify-content: space-between;
+
+        @include laptop-l {
+            flex-direction: row;
+            column-gap: rem(16);
+        }
+
+        @include laptop {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: rem(756);
+        height: rem(352);
+        border-radius: rem(16);
+        flex-shrink: 0;
+
+        @include laptop-l {
+            width: rem(505);
+            height: rem(232);
+        }
+
+        @include laptop {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__calculator {
+        background-color: var(--color-light);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: rem(24) rem(130);
+        row-gap: rem(28);
+        border-radius: rem(16);
+
+        @include mobile-l {
+            padding: rem(24) rem(50);
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(16);
+        }
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(24);
+
+        @include mobile-l {
+            grid-template-columns: 1fr;
+        }
+
+        > *:first-child {
+            grid-column: 1/-1;
+            
+            @include mobile-l {
+                min-width: auto;
+            }
+        }
+
+        > *:last-child {
+            grid-column: 1/-1;
+
+            @include mobile-l {
+                min-width: auto;
+            }
+        }
+
+        > *:not(:last-child):not(:first-child) {
+            max-width: rem(212);
+
+            @include laptop-l {
+                min-width: rem(267);
+            }
+
+            @include laptop {
+                min-width: rem(248);
+            }
+
+            @include mobile-l {
+                min-width: rem(280)
+            }
+            
+            @include mobile-m {
+                min-width: rem(180);
+            }
+
+            @include mobile-s {
+                min-width: rem(150);
+            }
+        }
+    }
+}

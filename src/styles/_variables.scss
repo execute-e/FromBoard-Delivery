@@ -1,0 +1,17 @@
+@use 'helpers' as *;
+
+:root {
+    --color-light: #F9FAFB;
+
+    --color-accent: #8B5CF6;
+    --color-dark: #111827;
+    --color-gray: #9CA3AF;
+    --background-color: #E5E7EB;
+
+    --font-family-base: 'Formular', sans-serif;
+
+    --container-width: #{rem(1536)};
+    --container-padding-x: #{rem(59)};
+
+    --transition-duration: 0.2s;
+}
