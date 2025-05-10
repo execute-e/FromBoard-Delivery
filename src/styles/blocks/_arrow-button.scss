@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.arrow-button {
+    width: rem(60);
+    min-width: rem(60);
+    height: rem(60);
+    border: none;
+    border-radius: 50%;
+
+    &--left {
+        background: url(../../../UI/icons/reviews/button-left.svg) no-repeat;
+    }
+
+    &--right {
+        background: url(../../../UI/icons/reviews/button-right.svg) no-repeat;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}

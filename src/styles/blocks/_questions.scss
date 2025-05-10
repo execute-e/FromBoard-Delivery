@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.questions {
+    background: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: rem(64);
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(24);
+
+        @include mobile-l {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__textarea {
+        grid-column: 1/-1;
+        min-height: rem(150);
+
+        @include mobile-l {
+            width: rem(200);
+        }
+    }
+
+    &__button {
+        grid-column: 1/-1;
+    }
+
+    &__input {
+        @include mobile-l {
+            width: rem(200);
+        }
+    }
+}

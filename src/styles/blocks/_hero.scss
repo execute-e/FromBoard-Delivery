@@ -70,6 +70,10 @@
             flex-direction: column;
             row-gap: rem(16);
         }
+
+        &-title {
+            font-weight: 700;
+        }
     }
 
     &__form {

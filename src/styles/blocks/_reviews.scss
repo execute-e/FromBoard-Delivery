@@ -1,0 +1,48 @@
+@use '../helpers' as *;
+
+.reviews {
+    &__body {
+        display: flex;
+        padding-inline: rem(23);
+        column-gap: rem(47);
+        align-items: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: stretch;
+        column-gap: rem(24);
+
+        @include laptop {
+            grid-template-columns: 1fr;
+        }
+
+        @include mobile-l {
+            display: none;
+        }
+    }
+
+    &__item {
+        transition: opacity 0.3 ease, transform 0.3s ease;
+
+        &.is-hidden {
+            display: none;
+        }
+    }
+
+    &__button {
+        @include mobile-l {
+            display: none;
+        }
+    }
+
+    &__mobile-visible-button {
+        text-align: center;
+        border-radius: rem(16);
+
+        @include mobile-l-above {
+            display: none;
+        }
+    }
+}

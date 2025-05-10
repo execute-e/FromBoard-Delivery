@@ -245,20 +245,6 @@ svg * {
   padding-inline: var(--container-padding-x);
 }
 
-.section {
-  margin-top: 4.5rem;
-}
-@media (width <= 47.9375rem) {
-  .section {
-    margin-top: 3.25rem;
-  }
-}
-@media (width <= 26.5rem) {
-  .section {
-    margin-top: 2rem;
-  }
-}
-
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -311,6 +297,14 @@ svg * {
 
 .fsize30 {
   font-size: 1.875rem !important;
+}
+
+.fsize14 {
+  font-size: 0.875rem !important;
+}
+
+.fsize18 {
+  font-size: 1.125rem !important;
 }
 
 html.is-lock {
@@ -432,6 +426,9 @@ input {
   background-color: transparent;
   border: 0.125rem solid var(--color-dark);
 }
+input::placeholder {
+  color: var(--color-gray);
+}
 @media (width <= 47.9375rem) {
   input {
     width: 17.5rem;
@@ -446,6 +443,17 @@ input {
   input {
     width: 9.375rem;
   }
+}
+
+textarea {
+  border-radius: 0.25rem;
+  border: 0.125rem solid var(--color-dark);
+  font-size: 1rem;
+  padding: 0.75rem;
+  resize: none;
+}
+textarea::placeholder {
+  color: var(--color-gray);
 }
 
 .header {
@@ -666,6 +674,33 @@ input {
   align-items: center;
 }
 
+.section {
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+@media (width <= 47.9375rem) {
+  .section {
+    margin-top: 3.25rem;
+  }
+}
+@media (width <= 26.5rem) {
+  .section {
+    margin-top: 2rem;
+  }
+}
+.section__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+.section__subtitle {
+  font-size: 1rem;
+}
+
 .btn {
   color: var(--color-light);
   background-color: var(--color-accent);
@@ -801,6 +836,9 @@ input {
   flex-direction: column;
   row-gap: 1rem;
 }
+.hero__calculator-title {
+  font-weight: 700;
+}
 .hero__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -853,6 +891,252 @@ input {
 @media (width <= 23.375rem) {
   .hero__form > *:not(:last-child):not(:first-child) {
     min-width: 9.375rem;
+  }
+}
+
+.about__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (width <= 159.9375rem) {
+  .about__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width <= 63.9375rem) {
+  .about__body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  column-gap: 0.75rem;
+  padding: 1.5rem;
+  align-items: center;
+}
+@media (width <= 47.9375rem) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.card__image {
+  width: 8.5rem;
+  height: 8.5rem;
+  flex-shrink: 0;
+}
+@media (width <= 63.9375rem) {
+  .card__image {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+.card__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+
+.guarantees__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.25rem;
+  align-items: center;
+}
+.guarantees__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.5rem;
+}
+@media (width <= 159.9375rem) {
+  .guarantees__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+  }
+}
+@media (width <= 63.9375rem) {
+  .guarantees__list {
+    grid-template-columns: 1fr;
+  }
+}
+.guarantees__button {
+  justify-content: center;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+@media (width <= 63.9375rem) {
+  .guarantees__button {
+    align-self: normal;
+  }
+}
+
+.document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 0.25rem;
+}
+.document__image {
+  flex-shrink: 0;
+  width: 22.875rem;
+  height: 23.4375rem;
+}
+@media (width <= 47.9375rem) {
+  .document__image {
+    width: 18.75rem;
+    height: auto;
+  }
+}
+@media (width <= 26.5rem) {
+  .document__image {
+    width: 15.625rem;
+  }
+}
+@media (width <= 23.375rem) {
+  .document__image {
+    width: 12.5rem;
+  }
+}
+
+.reviews__body {
+  display: flex;
+  padding-inline: 1.4375rem;
+  column-gap: 2.9375rem;
+  align-items: center;
+}
+.reviews__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+  column-gap: 1.5rem;
+}
+@media (width <= 89.9375rem) {
+  .reviews__list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (width <= 47.9375rem) {
+  .reviews__list {
+    display: none;
+  }
+}
+.reviews__item {
+  transition: opacity 0.3 ease, transform 0.3s ease;
+}
+.reviews__item.is-hidden {
+  display: none;
+}
+@media (width <= 47.9375rem) {
+  .reviews__button {
+    display: none;
+  }
+}
+.reviews__mobile-visible-button {
+  text-align: center;
+  border-radius: 1rem;
+}
+@media (width >= 47.9375rem) {
+  .reviews__mobile-visible-button {
+    display: none;
+  }
+}
+
+.review {
+  padding: 2rem 2.6875rem;
+  background-color: var(--color-light);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 21.875rem;
+  justify-content: space-between;
+}
+@media (width <= 89.9375rem) {
+  .review {
+    height: 17.25rem;
+  }
+}
+@media (width <= 63.9375rem) {
+  .review {
+    min-height: 17.5rem;
+    height: auto;
+  }
+}
+.review__text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  position: relative;
+  z-index: 110;
+}
+.review__author {
+  display: flex;
+  align-items: end;
+  font-weight: 300;
+  color: var(--color-gray);
+}
+.review__decoration {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 1.5rem;
+  z-index: 90;
+}
+
+.arrow-button {
+  width: 3.75rem;
+  min-width: 3.75rem;
+  height: 3.75rem;
+  border: none;
+  border-radius: 50%;
+}
+.arrow-button--left {
+  background: url(../../../UI/icons/reviews/button-left.svg) no-repeat;
+}
+.arrow-button--right {
+  background: url(../../../UI/icons/reviews/button-right.svg) no-repeat;
+}
+.arrow-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.questions {
+  background: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 4rem;
+}
+.questions__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (width <= 47.9375rem) {
+  .questions__form {
+    grid-template-columns: 1fr;
+  }
+}
+.questions__textarea {
+  grid-column: 1/-1;
+  min-height: 9.375rem;
+}
+@media (width <= 47.9375rem) {
+  .questions__textarea {
+    width: 12.5rem;
+  }
+}
+.questions__button {
+  grid-column: 1/-1;
+}
+@media (width <= 47.9375rem) {
+  .questions__input {
+    width: 12.5rem;
   }
 }
 

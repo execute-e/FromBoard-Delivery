@@ -6,18 +6,6 @@
     padding-inline: var(--container-padding-x);
 }
 
-.section {
-    margin-top: rem(72);
-
-    @include mobile-l {
-        margin-top: rem(52);
-    }
-
-    @include mobile-m {
-        margin-top: rem(32);
-    }
-}
-
 .visually-hidden {
     @include visually-hidden;
 }
@@ -60,4 +48,12 @@
 
 .fsize30 {
     font-size: rem(30) !important;
+}
+
+.fsize14 {
+    font-size: rem(14) !important;
+}
+
+.fsize18 {
+    font-size: rem(18) !important;
 }

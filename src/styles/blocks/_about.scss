@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.about {
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(24);
+
+        @include laptop-l {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+}

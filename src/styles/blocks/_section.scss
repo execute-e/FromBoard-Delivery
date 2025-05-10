@@ -1,0 +1,28 @@
+@use '../helpers' as *;
+
+.section {
+    margin-top: rem(72);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(32);
+
+    @include mobile-l {
+        margin-top: rem(52);
+    }
+
+    @include mobile-m {
+        margin-top: rem(32);
+    }
+
+    &__header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(12);
+    }
+
+    &__subtitle {
+        font-size: rem(16);
+    }
+}

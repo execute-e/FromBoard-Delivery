@@ -122,6 +122,10 @@ input {
     background-color: transparent;
     border: rem(2) solid var(--color-dark);
 
+    &::placeholder {
+        color: var(--color-gray);
+    }
+
     @include mobile-l {
         width: rem(280);
     }
@@ -132,5 +136,17 @@ input {
 
     @include mobile-s {
         width: rem(150);
+    }
+}
+
+textarea {
+    border-radius: rem(4);
+    border: rem(2) solid var(--color-dark);
+    font-size: rem(16);
+    padding: rem(12);
+    resize: none;
+
+    &::placeholder {
+        color: var(--color-gray);
     }
 }

@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.guarantees {
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(36);
+        align-items: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: rem(24);
+
+        @include laptop-l {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: rem(24);
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__button {
+        justify-content: center;
+        border-radius: rem(12);
+        text-align: center;
+
+        @include tablet {
+            align-self: normal;
+        }
+    }
+}
