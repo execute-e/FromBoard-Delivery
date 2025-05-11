@@ -1099,10 +1099,10 @@ textarea::placeholder {
   border-radius: 50%;
 }
 .arrow-button--left {
-  background: url(../../../UI/icons/reviews/button-left.svg) no-repeat;
+  background: url(../../UI/icons/reviews/button-left.svg) no-repeat;
 }
 .arrow-button--right {
-  background: url(../../../UI/icons/reviews/button-right.svg) no-repeat;
+  background: url(../../UI/icons/reviews/button-right.svg) no-repeat;
 }
 .arrow-button:disabled {
   opacity: 0.5;
