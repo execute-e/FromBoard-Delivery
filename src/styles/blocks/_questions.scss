@@ -1,11 +1,32 @@
 @use '../helpers' as *;
 
 .questions {
-    background: var(--color-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-block: rem(64);
+    &__inner {
+        background: var(--color-light);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: rem(64) rem(515);
+        row-gap: rem(32);
+        border-radius: rem(16);
+
+        @include laptop-l {
+            padding-inline: rem(265);
+        }
+
+        @include laptop {
+            padding-inline: rem(135);
+        }
+
+        @include tablet {
+            padding-inline: rem(70);
+        }
+
+        @include mobile-s {
+            padding-inline: rem(35) ;
+        }
+    }
+
 
     &__form {
         display: grid;

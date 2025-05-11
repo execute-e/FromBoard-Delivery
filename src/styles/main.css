@@ -307,6 +307,10 @@ svg * {
   font-size: 1.125rem !important;
 }
 
+.fsize12 {
+  font-size: 0.75rem !important;
+}
+
 html.is-lock {
   overflow: hidden;
 }
@@ -812,7 +816,7 @@ textarea::placeholder {
 }
 @media (width <= 89.9375rem) {
   .hero__image {
-    width: 100%;
+    width: auto;
     height: auto;
   }
 }
@@ -822,13 +826,14 @@ textarea::placeholder {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 1.5rem 8.125rem;
+  padding-block: 1.5rem;
+  width: 100%;
   row-gap: 1.75rem;
   border-radius: 1rem;
 }
 @media (width <= 47.9375rem) {
   .hero__calculator {
-    padding: 1.5rem 3.125rem;
+    padding-block: 1.5rem;
   }
 }
 .hero__calculator-info {
@@ -1105,12 +1110,34 @@ textarea::placeholder {
   cursor: not-allowed;
 }
 
-.questions {
+.questions__inner {
   background: var(--color-light);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 4rem;
+  padding: 4rem 32.1875rem;
+  row-gap: 2rem;
+  border-radius: 1rem;
+}
+@media (width <= 159.9375rem) {
+  .questions__inner {
+    padding-inline: 16.5625rem;
+  }
+}
+@media (width <= 89.9375rem) {
+  .questions__inner {
+    padding-inline: 8.4375rem;
+  }
+}
+@media (width <= 63.9375rem) {
+  .questions__inner {
+    padding-inline: 4.375rem;
+  }
+}
+@media (width <= 23.375rem) {
+  .questions__inner {
+    padding-inline: 2.1875rem;
+  }
 }
 .questions__form {
   display: grid;
@@ -1137,6 +1164,82 @@ textarea::placeholder {
 @media (width <= 47.9375rem) {
   .questions__input {
     width: 12.5rem;
+  }
+}
+
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  margin-top: 4.5rem;
+}
+.footer__inner {
+  padding-block: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (width <= 89.9375rem) {
+  .footer__inner {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+}
+.footer__overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media (width >= 89.9375rem) {
+  .footer__overlay {
+    display: contents;
+  }
+}
+@media (width <= 63.9375rem) {
+  .footer__overlay {
+    flex-direction: column;
+    row-gap: 1.5rem;
+    text-align: center;
+  }
+}
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+@media (width >= 89.9375rem) {
+  .footer__logo {
+    order: -1;
+  }
+}
+@media (width <= 63.9375rem) {
+  .footer__logo {
+    order: 1;
+    align-items: center;
+  }
+}
+.footer__list {
+  display: flex;
+  column-gap: 1.5rem;
+}
+@media (width <= 47.9375rem) {
+  .footer__list {
+    flex-direction: column;
+    row-gap: 0.5rem;
+    text-align: center;
+  }
+}
+.footer__phone {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+.footer__number {
+  color: var(--color-light);
+}
+@media (width <= 47.9375rem) {
+  .footer__number {
+    font-size: 1.5rem;
   }
 }
 

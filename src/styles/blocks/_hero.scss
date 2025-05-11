@@ -46,7 +46,7 @@
         }
 
         @include laptop {
-            width: 100%;
+            width: auto;
             height: auto;
         }
     }
@@ -57,12 +57,13 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: rem(24) rem(130);
+        padding-block: rem(24);
+        width: 100%;
         row-gap: rem(28);
         border-radius: rem(16);
 
         @include mobile-l {
-            padding: rem(24) rem(50);
+            padding-block: rem(24);
         }
 
         &-info {
